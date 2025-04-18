@@ -92,6 +92,10 @@ const Dashboard = () => {
     window.location.href = `${API_BASE_URL}/auth/shopify?shop=${shopDomain}`;
   };
 
+  const makeIsConnectedTrue = () => {
+    setIsConnected(true);
+  };
+
   const handlePageSelect = (e) => {
     setSelectedPageId(e.target.value);
   };
@@ -143,6 +147,7 @@ const Dashboard = () => {
           >
             Connect Store
           </button>
+          <button onClick={makeIsConnectedTrue} className="w-64 bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded transition">Show frontend</button>
         </div>
       ) : (
         <div className="bg-white p-6 rounded-lg shadow-md">
